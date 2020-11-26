@@ -44,3 +44,5 @@ jobs:
           name: ref
       - name: Display ref file
         run: cat ref.txt
+      - name: Display folder
+        run: ls
