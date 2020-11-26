@@ -49,9 +49,21 @@ jobs:
       - name: Copy file to server
         uses: Burnett01/rsync-deployments@4.1
         with:
-          switches: -avzr --delete
+          switches: -vzr --delete
           path: "*"
           remote_path: "actions"
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USERNAME }}
           remote_key: ${{ secrets.SSH_KEY }}
+      - name: SSH to server
+        uses: appleboy/ssh-action@master
+        env:
+          TAG_NAME: ${{ github.event.release.tag_name }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script_stop: true
+          envs: TAG_NAME
+          script: |
+            sed -i "s#smart-home:.*#smart-home:$TAG_NAME#g" test.txt
