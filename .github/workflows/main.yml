@@ -42,6 +42,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ref
+      - name: Download ref file to ref folder
+        uses: actions/download-artifact@v2
+        with:
+          name: ref
+          path: ref
       - name: Display ref file
         run: cat ref.txt
       - name: Display folder
@@ -67,3 +72,10 @@ jobs:
           envs: TAG_NAME
           script: |
             sed -i "s#smart-home:.*#smart-home:$TAG_NAME#g" test.txt
+      - name: Upload Release Assets
+        uses: alexellis/upload-assets@0.2.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_paths: '["test.txt", "ref"]'
+
