@@ -22,11 +22,20 @@ jobs:
         run: echo $REF > ref.txt
         env:
           REF: ${{ github.event.ref }}
+      - name: Save tag_name to file
+        run: echo $TAG_NAME > tag_name.txt
+        env:
+          TAG_NAME: ${{ github.event.release.tag_name }}
       - name: Upload Ref file
         uses: actions/upload-artifact@v2
         with:
           name: ref
           path: ${{ github.workspace }}/ref.txt
+      - name: Upload Ref file
+        uses: actions/upload-artifact@v2
+        with:
+          name: tag_name
+          path: ${{ github.workspace }}/tag_name.txt
 
   deploy:
     name: Deploy
@@ -38,15 +47,10 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: echo "$EVENT_NAME"
-      - name: Download ref file
+      - name: Download all files
         uses: actions/download-artifact@v2
-        with:
-          name: ref
-      - name: Download ref file to ref folder
-        uses: actions/download-artifact@v2
-        with:
-          name: ref
-          path: ref
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Display ref file
         run: cat ref.txt
       - name: Display folder
@@ -72,10 +76,11 @@ jobs:
           envs: TAG_NAME
           script: |
             sed -i "s#smart-home:.*#smart-home:$TAG_NAME#g" test.txt
+      - name: Tar
+        run: tar -czvf tag_name.tar.gz tag_name
       - name: Upload Release Assets
         uses: alexellis/upload-assets@0.2.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          asset_paths: '["*.txt", "ref"]'
-
+          asset_paths: '["ref/*.txt", "tag_name.tar.gz"]'
