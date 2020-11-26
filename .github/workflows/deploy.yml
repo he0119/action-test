@@ -13,3 +13,9 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event.release) }}
         run: echo "$GITHUB_CONTEXT"
+      - name: Download ref file
+        uses: actions/download-artifact@v2
+        with:
+          name: ref
+      - name: Display ref file
+        run: cat ref.txt
