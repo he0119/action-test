@@ -18,3 +18,12 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$GITHUB_CONTEXT"
+      - name: Save ref to file
+        run: echo $REF > ref.txt
+        env:
+          REF: ${{ github.event.ref }}
+      - name: Upload Ref file
+        uses: actions/upload-artifact@v2
+        with:
+          name: ref
+          path: ${{ github.workspace }}/ref.txt
