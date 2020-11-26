@@ -27,3 +27,19 @@ jobs:
         with:
           name: ref
           path: ${{ github.workspace }}/ref.txt
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Dump event_name
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: echo "$EVENT_NAME"
+      - name: Download ref file
+        uses: actions/download-artifact@v2
+        with:
+          name: ref
+      - name: Display ref file
+        run: cat ref.txt
