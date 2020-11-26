@@ -51,10 +51,6 @@ jobs:
         uses: actions/download-artifact@v2
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Display ref file
-        run: cat ref.txt
-      - name: Display folder
-        run: ls
       - name: Copy file to server
         uses: Burnett01/rsync-deployments@4.1
         with:
