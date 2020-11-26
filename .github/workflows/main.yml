@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'dev'
+    tags:
+      - 'v*'
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github.event) }}
+        run: echo "$GITHUB_CONTEXT"
