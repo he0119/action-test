@@ -8,6 +8,8 @@ on:
     tags:
       - 'v*'
   pull_request:
+  release:
+    types: [published]
 
 jobs:
   test:
