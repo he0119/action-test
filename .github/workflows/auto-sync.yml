@@ -7,7 +7,6 @@ on:
     - cron: '0 18 * * *'
   workflow_dispatch:
 
-name: Mirror GitHub Auto Queried Repos to Gitee
 jobs:
   run:
     name: Sync-GitHub-to-Gitee
