@@ -1,0 +1,24 @@
+name: Auto Sync
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # UTC 18:00 -> CST (China) 2:00, see https://datetime360.com/cn/utc-cst-china-time/
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+name: Mirror GitHub Auto Queried Repos to Gitee
+jobs:
+  run:
+    name: Sync-GitHub-to-Gitee
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mirror the Github repos to Gitee.
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/he0119
+        dst: gitee/he0119
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        force_update: true
+        static_list: "CoolQBot,smart-home,smart-home-flutter,smart-home-device,smart-home-deploy"
