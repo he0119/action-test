@@ -18,29 +18,35 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: Save ref to file
-        run: echo $REF > ref.txt
+      - name: Set version
+        id: setVersion
+        run: |
+          if [[ "${{github.event_name}}" == "release" && "${{github.event.action}}" == "published" ]]; then
+            echo "::set-output name=version::prod"
+          else
+            echo "::set-output name=version::dev"
+          fi
+
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Save version to file
+        run: echo $VERSION > version.txt
         env:
-          REF: ${{ github.event.ref }}
-      - name: Save tag_name to file
-        run: echo $TAG_NAME > tag_name.txt
-        env:
-          TAG_NAME: ${{ github.event.release.tag_name }}
-      - name: Upload Ref file
+          VERSION: ${{ needs.test.outputs.version }}
+      - name: Upload version file
         uses: actions/upload-artifact@v2
         with:
-          name: ref
-          path: ${{ github.workspace }}/ref.txt
-      - name: Upload Ref file
-        uses: actions/upload-artifact@v2
-        with:
-          name: tag_name
-          path: ${{ github.workspace }}/tag_name.txt
+          name: version
+          path: ${{ github.workspace }}/version.txt
 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    needs: test
+    needs: build
     if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
     steps:
       - name: Dump event_name
@@ -51,32 +57,3 @@ jobs:
         uses: actions/download-artifact@v2
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Copy file to server
-        uses: Burnett01/rsync-deployments@4.1
-        with:
-          switches: -vzr --delete
-          path: "."
-          remote_path: "actions"
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_user: ${{ secrets.SSH_USERNAME }}
-          remote_key: ${{ secrets.SSH_KEY }}
-      - name: SSH to server
-        uses: appleboy/ssh-action@master
-        env:
-          TAG_NAME: ${{ github.event.release.tag_name }}
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script_stop: true
-          envs: TAG_NAME
-          script: |
-            sed -i "s#smart-home:.*#smart-home:$TAG_NAME#g" test.txt
-      - name: Tar
-        run: tar -czvf tag_name.tar.gz tag_name
-      - name: Upload Release Assets
-        uses: alexellis/upload-assets@0.2.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          asset_paths: '["ref/*.txt", "tag_name.tar.gz"]'
