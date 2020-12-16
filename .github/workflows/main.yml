@@ -45,8 +45,8 @@ jobs:
           name: version
           path: ${{ github.workspace }}/version.txt
 
-  deploy:
-    name: Deploy
+  deploy_dev:
+    name: Deploy Development
     runs-on: ubuntu-latest
     needs: build
     if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
@@ -55,7 +55,23 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: echo "$EVENT_NAME"
-      - name: Download all files
-        uses: actions/download-artifact@v2
-      - name: Display structure of downloaded files
-        run: ls -R
+      - name: Dump TEST ENV
+        env:
+          TEST_ENV: ${{ secrets.TEST_ENV }}
+        run: echo "$TEST_ENV"
+
+  deploy_prod:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    needs: deploy_dev
+    environment: production
+    if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+    steps:
+      - name: Dump event_name
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: echo "$EVENT_NAME"
+      - name: Dump TEST ENV
+        env:
+          TEST_ENV: ${{ secrets.TEST_ENV }}
+        run: echo "$TEST_ENV"
