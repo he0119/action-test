@@ -55,10 +55,11 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: echo "$EVENT_NAME"
-      - name: TEST ENV
+      - name: Test env
         env:
           TEST_ENV: ${{ secrets.TEST_ENV }}
-        run: [ "$TEST_ENV" == "dev" ] && echo "dev" || echo "Not dev"
+        run: |
+          [ "$TEST_ENV" == "dev" ] && echo "dev" || echo "Not dev"
 
   deploy_prod:
     name: Deploy Production
@@ -71,7 +72,8 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: echo "$EVENT_NAME"
-      - name: TEST ENV
+      - name: Test env
         env:
           TEST_ENV: ${{ secrets.TEST_ENV }}
-        run: [ "$TEST_ENV" == "prod" ] && echo "prod" || echo "Not prod"
+        run: |
+          [ "$TEST_ENV" == "prod" ] && echo "prod" || echo "Not prod"
