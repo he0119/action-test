@@ -46,7 +46,7 @@ jobs:
       - name: Get commit hash
         if: ${{ github.ref == 'refs/heads/dev' }}
         env:
-          GIT_COMMIT_ID: ${{ github.context.head_commit.id }}
+          GIT_COMMIT_ID: ${{ github.event.head_commit.id }}
         run: echo $GIT_COMMIT_ID
 
   deploy_dev:
