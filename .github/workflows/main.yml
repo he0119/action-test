@@ -43,13 +43,18 @@ jobs:
         with:
           name: version
           path: ${{ github.workspace }}/version.txt
+      - name: Get commit hash
+        if: ${{ github.ref == 'refs/heads/dev' }}
+        env:
+          GIT_COMMIT_ID: ${{ github.context.head_commit.id }}
+        run: echo $GIT_COMMIT_ID
 
   deploy_dev:
     name: Deploy Development
     runs-on: ubuntu-latest
     needs: build
     environment: Development
-    if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+    if: ${{ github.ref == 'refs/heads/dev' }}
     steps:
       - name: Dump event_name
         env:
