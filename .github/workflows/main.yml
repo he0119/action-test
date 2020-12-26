@@ -34,6 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Save version to file
         run: echo $VERSION > version.txt
         env:
@@ -43,11 +45,13 @@ jobs:
         with:
           name: version
           path: ${{ github.workspace }}/version.txt
-      - name: Get commit hash
+      - name: Set git commit id
         if: ${{ github.ref == 'refs/heads/dev' }}
-        env:
-          GIT_COMMIT_ID: ${{ github.event.head_commit.id }}
-        run: echo $GIT_COMMIT_ID
+        id: git
+        run: echo "::set-output name=commit_id::$(git rev-parse --short HEAD)"
+      - name: Check outputs
+        if: ${{ github.ref == 'refs/heads/dev' }}
+        run: echo ${{ steps.git.outputs.commit_id }}
 
   deploy_dev:
     name: Deploy Development
