@@ -7,13 +7,11 @@ jobs:
   pr-labeler:
     runs-on: ubuntu-latest
     steps:
-      - uses: TimonVS/pr-labeler-action@v3
+      - name: Labeler(branch name)
+        uses: TimonVS/pr-labeler-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/labeler@main
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Labeler(file change)
+        uses: actions/labeler@main
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
