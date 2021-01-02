@@ -1,5 +1,5 @@
-feature: ['feature/*', 'feat/*'],
-fix: 'fix/*',
+feature: ['feature/*', 'feat/*']
+fix: 'fix/*'
 change: 'change/*'
 improve: 'improve/*'
 chore: 'chore/*'
