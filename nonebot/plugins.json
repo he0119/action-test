@@ -206,5 +206,13 @@
     "desc": "将用户发的av号或者bv号转成小程序返回",
     "name": "biliav小程序转换器",
     "repo": "knva/nonebot_plugin_biliav"
+  },
+  {
+    "id": "test",
+    "link": "test",
+    "name": "test1",
+    "desc": "test",
+    "author": "he0119",
+    "repo": "test"
   }
 ]
