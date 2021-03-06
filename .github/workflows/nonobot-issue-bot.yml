@@ -1,0 +1,27 @@
+name: 'Plugin Issue Bot'
+
+on:
+  push:
+    branches:
+      - main
+  issues:
+    types: [opened, reopened, edited]
+  pull_request:
+    types: [closed]
+
+jobs:
+  issue_bot:
+    runs-on: ubuntu-latest
+    name: plugin issue bot
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: NoneBot2 Plugin Issue Bot
+        uses: he0119/nonebot2-plugin-issue-bot@dev
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          plugin_path: nonebot/plugins.json
+          bot_path: nonebot/bots.json
+          adapter_path: nonebot/adapters.json
