@@ -22,5 +22,13 @@
     "desc": "Mirai-Api-HTTP 协议",
     "author": "Mix",
     "repo": "nonebot/nonebot2/tree/master/packages/nonebot-adapter-mirai"
+  },
+  {
+    "id": "nonebot.adapters.feishu",
+    "link": "nonebot-adapter-feishu",
+    "name": "feishu",
+    "desc": "飞书协议",
+    "author": "he0119",
+    "repo": "nonebot/nonebot2/tree/master/packages/nonebot-adapter-feishu"
   }
 ]
