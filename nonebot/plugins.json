@@ -214,5 +214,13 @@
     "desc": "test",
     "author": "he0119",
     "repo": "test"
+  },
+  {
+    "id": "asfasdf",
+    "link": "123",
+    "name": "测试插件",
+    "desc": "测试插件",
+    "author": "he0119",
+    "repo": "asdfasdf"
   }
 ]
