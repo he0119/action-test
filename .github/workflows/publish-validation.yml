@@ -1,0 +1,24 @@
+name: 'Publish Validation'
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    needs: issue_bot
+    steps:
+      - name: NoneBot2 Plugin Issue Bot
+        uses: he0119/nonebot2-plugin-issue-bot@feat/pypi
+        id: publishBot
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          plugin_path: nonebot/plugins.json
+          bot_path: nonebot/bots.json
+          adapter_path: nonebot/adapters.json
+      - name: Print info
+        run: echo $INFO
+        env:
+          INFO: ${{ publishBot.outputs.info }}
