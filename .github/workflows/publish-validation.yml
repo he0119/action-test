@@ -1,7 +1,9 @@
 name: 'Publish Validation'
 
 on:
-  pull_request:
+  push:
+    branches:
+      - 'publish/*'
 
 jobs:
   test:
