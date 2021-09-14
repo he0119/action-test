@@ -19,4 +19,4 @@ jobs:
       - name: Test
         run: |
           git diff origin/main..HEAD > diff
-          echo diff
+          cat diff
