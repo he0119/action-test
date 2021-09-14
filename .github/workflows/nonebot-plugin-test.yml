@@ -1,0 +1,13 @@
+name: 'Plugin Test'
+
+on:
+  pull_request:
+
+jobs:
+  issue_bot:
+    runs-on: ubuntu-latest
+    name: plugin issue bot
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
