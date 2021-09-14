@@ -1,4 +1,4 @@
-name: 'Plugin Test'
+name: 'Plugin Check'
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
       - 'publish/**'
 
 jobs:
-  plugin_test:
+  plugin_check:
     runs-on: ubuntu-latest
-    name: plugin Test
+    name: plugin Check
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,9 +16,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: NoneBot2 Plugin Test
+      - name: NoneBot2 Plugin Check
         uses: he0119/nonebot2-plugin-issue-bot@feat/check
         with:
           token: ${{ secrets.MYGITHUB_TOKEN }}
           base: main
-          mode: test
+          mode: check
