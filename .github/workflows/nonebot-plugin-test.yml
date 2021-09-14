@@ -16,8 +16,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: Test
-        run: |
-          git fetch origin main
-          git diff origin/main..HEAD > diff
-          cat diff
+      - name: NoneBot2 Plugin Test
+        uses: he0119/nonebot2-plugin-issue-bot@feat/check
+        with:
+          token: ${{ secrets.MYGITHUB_TOKEN }}
+          base: main
+          mode: test
