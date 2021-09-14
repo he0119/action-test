@@ -1,12 +1,12 @@
 name: 'Plugin Check'
 
 on:
-  pull_request_target:
+  pull_request:
 
 jobs:
   plugin_check:
     runs-on: ubuntu-latest
-    name: plugin Check
+    name: plugin check
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
