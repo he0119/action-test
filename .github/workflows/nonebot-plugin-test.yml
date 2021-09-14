@@ -2,13 +2,11 @@ name: 'Plugin Test'
 
 on:
   pull_request:
-    paths:
-      - 'nonebot/**'
 
 jobs:
-  issue_bot:
+  plugin_test:
     runs-on: ubuntu-latest
-    name: plugin issue bot
+    name: plugin Test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
