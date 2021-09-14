@@ -18,5 +18,6 @@ jobs:
           python-version: 3.9
       - name: Test
         run: |
+          git fetch origin main
           git diff origin/main..HEAD > diff
           cat diff
