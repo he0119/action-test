@@ -1,7 +1,9 @@
 name: 'Plugin Test'
 
 on:
-  pull_request:
+  push:
+    branches:
+      - 'publish/**'
 
 jobs:
   plugin_test:
