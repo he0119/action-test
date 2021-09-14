@@ -1,9 +1,7 @@
 name: 'Plugin Check'
 
 on:
-  push:
-    branches:
-      - 'publish/**'
+  pull_request:
 
 jobs:
   plugin_check:
