@@ -5,7 +5,6 @@ on:
     branches:
       - 'publish/**'
 
-
 jobs:
   issue_bot:
     runs-on: ubuntu-latest
@@ -13,4 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Test
+        run: |
+          git diff origin/main..HEAD > diff
+          echo diff
