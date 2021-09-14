@@ -6,7 +6,7 @@ on:
 jobs:
   plugin_check:
     runs-on: ubuntu-latest
-    name: plugin Check
+    name: plugin check
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
