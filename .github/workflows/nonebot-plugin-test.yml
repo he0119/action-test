@@ -2,6 +2,9 @@ name: 'Plugin Test'
 
 on:
   pull_request:
+    branches:
+      - 'publish/**'
+
 
 jobs:
   issue_bot:
