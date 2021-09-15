@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MYGITHUB_TOKEN }}
       - name: NoneBot2 Plugin Issue Bot
         uses: he0119/nonebot2-plugin-issue-bot@dev
         with:
