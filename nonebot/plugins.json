@@ -222,5 +222,13 @@
     "desc": "测试插件",
     "author": "he0119",
     "repo": "asdfasdf"
+  },
+  {
+    "id": "nonebot",
+    "link": "nonebot2",
+    "name": "测试插件8",
+    "desc": "测试插件2",
+    "author": "he0119",
+    "repo": "nonebot"
   }
 ]
