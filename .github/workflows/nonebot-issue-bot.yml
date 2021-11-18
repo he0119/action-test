@@ -17,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: NoneBot2 Plugin Issue Bot
-        uses: he0119/nonebot2-plugin-issue-bot@dev
+        uses: he0119/nonebot2-plugin-issue-bot@change/update
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
