@@ -17,10 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: NoneBot2 Plugin Issue Bot
-        uses: he0119/nonebot2-plugin-issue-bot@change/update
+        uses: he0119/nonebot2-plugin-issue-bot@change/python
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          plugin_path: nonebot/plugins.json
-          bot_path: nonebot/bots.json
-          adapter_path: nonebot/adapters.json
+          config: >
+            {
+              "base": "main",
+              "plugin_path": "nonebot/plugins.json",
+              "bot_path": "nonebot/bots.json",
+              "adapter_path": "nonebot/adapters.json"
+            }
