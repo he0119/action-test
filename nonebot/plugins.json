@@ -222,5 +222,18 @@
     "desc": "测试插件",
     "author": "he0119",
     "repo": "asdfasdf"
+  },
+  {
+    "name": "测试插件2021/12/9 14:47",
+    "desc": "1231231231",
+    "author": "he0119",
+    "homepage": "https://baidu.com",
+    "tags": [
+      "123",
+      " 12"
+    ],
+    "is_official": true,
+    "module_name": "nonebot",
+    "project_link": "nonebot21"
   }
 ]
