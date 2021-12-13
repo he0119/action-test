@@ -235,5 +235,18 @@
     "is_official": true,
     "module_name": "nonebot",
     "project_link": "nonebot2"
+  },
+  {
+    "module_name": "nonebot",
+    "project_link": "nonebot2",
+    "name": "测试插件2021/12/13 11:41",
+    "desc": "1231231231",
+    "author": "he0119",
+    "homepage": "https://baidu.com",
+    "tags": [
+      "123",
+      "12"
+    ],
+    "is_official": true
   }
 ]
