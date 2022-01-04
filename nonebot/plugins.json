@@ -248,5 +248,20 @@
       "12"
     ],
     "is_official": true
+  },
+  {
+    "module_name": "test",
+    "project_link": "nonebot",
+    "name": "test",
+    "desc": "test",
+    "author": "he0119",
+    "homepage": "https://v2.nonebot.dev",
+    "tags": [
+      {
+        "label": "test",
+        "color": "#d95353"
+      }
+    ],
+    "is_official": false
   }
 ]
