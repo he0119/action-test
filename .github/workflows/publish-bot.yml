@@ -19,7 +19,7 @@ jobs:
       - name: NoneBot2 Publish Bot
         uses: nonebot/nonebot2-publish-bot@dev
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           config: >
             {
               "base": "main",
