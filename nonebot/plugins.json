@@ -263,5 +263,20 @@
       }
     ],
     "is_official": false
+  },
+  {
+    "project_link": "nonebot-plugin-docs",
+    "module_name": "nonebot_plugin_docs",
+    "name": "插件管理器",
+    "desc": "基于Hook的插件管理器",
+    "author": "he0119",
+    "homepage": "https://github.com/CherryGS/nonebot_plugin_PCtrl",
+    "tags": [
+      {
+        "label": "test2",
+        "color": "#ffffff"
+      }
+    ],
+    "is_official": false
   }
 ]
