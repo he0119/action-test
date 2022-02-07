@@ -30,6 +30,7 @@ jobs:
     steps:
       - run: printenv
       - run: |
+          ls -la
           touch test.file
           git config --global user.name test
           git config --global user.email test@example.com
