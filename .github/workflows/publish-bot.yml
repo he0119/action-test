@@ -13,9 +13,21 @@ jobs:
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
+    permissions:
+      actions: none
+      checks: none
+      contents: none
+      deployments: none
+      id-token: none
+      issues: read
+      discussions: none
+      packages: none
+      pages: none
+      pull-requests: none
+      repository-projects: none
+      security-events: none
+      statuses: none
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
       - name: NoneBot2 Publish Bot
         uses: docker://ghcr.io/nonebot/nonebot2-publish-bot:dev
         with:
