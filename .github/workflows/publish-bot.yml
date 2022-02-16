@@ -10,51 +10,51 @@ on:
     types: [closed]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    name: test permissions
-    permissions:
-      actions: none
-      checks: none
-      contents: none
-      deployments: none
-      id-token: none
-      issues: read
-      discussions: none
-      packages: none
-      pages: none
-      pull-requests: none
-      repository-projects: none
-      security-events: none
-      statuses: none
-    steps:
-      - run: printenv
-      - run: |
-          ls -la
-          touch test.file
-          git config --global user.name test
-          git config --global user.email test@example.com
-          git add .
-          git commit -m test
-          git push
+#   test:
+#     runs-on: ubuntu-latest
+#     name: test permissions
+#     permissions:
+#       actions: none
+#       checks: none
+#       contents: none
+#       deployments: none
+#       id-token: none
+#       issues: read
+#       discussions: none
+#       packages: none
+#       pages: none
+#       pull-requests: none
+#       repository-projects: none
+#       security-events: none
+#       statuses: none
+#     steps:
+#       - run: printenv
+#       - run: |
+#           ls -la
+#           touch test.file
+#           git config --global user.name test
+#           git config --global user.email test@example.com
+#           git add .
+#           git commit -m test
+#           git push
 
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
-    permissions:
-      actions: none
-      checks: none
-      contents: none
-      deployments: none
-      id-token: none
-      issues: read
-      discussions: none
-      packages: none
-      pages: none
-      pull-requests: none
-      repository-projects: none
-      security-events: none
-      statuses: none
+#     permissions:
+#       actions: none
+#       checks: none
+#       contents: none
+#       deployments: none
+#       id-token: none
+#       issues: read
+#       discussions: none
+#       packages: none
+#       pages: none
+#       pull-requests: none
+#       repository-projects: none
+#       security-events: none
+#       statuses: none
     steps:
       - name: NoneBot2 Publish Bot
         uses: docker://ghcr.io/nonebot/nonebot2-publish-bot:dev
