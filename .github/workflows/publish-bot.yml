@@ -37,7 +37,22 @@ jobs:
 #           git add .
 #           git commit -m test
 #           git push
-
+  check_start:
+    name: start preview info
+    runs-on: ubuntu-latest
+    steps:
+      - name: update status comment
+        uses: actions-cool/maintain-one-comment@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            # 📃 商店发布检查结果
+            
+            ⚠️ 正在检查中，请稍后 ⚠️
+            
+            💪 Powered by NoneBot2 Publish Bot
+            <!-- PUBLISH_BOT -->
+          body-include: '<!-- PUBLISH_BOT -->'
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
