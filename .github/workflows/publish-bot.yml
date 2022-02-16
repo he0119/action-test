@@ -56,6 +56,8 @@ jobs:
 #       security-events: none
 #       statuses: none
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: NoneBot2 Publish Bot
         uses: docker://ghcr.io/nonebot/nonebot2-publish-bot:dev
         with:
