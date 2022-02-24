@@ -16,4 +16,4 @@ jobs:
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
         force_update: true
-        static_list: "CoolQBot,smart-home,smart-home-flutter,smart-home-device,smart-home-deploy"
+        static_list: "smart-home,smart-home-flutter,smart-home-device,smart-home-deploy,CoolQBot,nonebot-plugin-datastore,nonebot-plugin-wordcloud"
