@@ -263,5 +263,15 @@
       }
     ],
     "is_official": false
+  },
+  {
+    "module_name": "",
+    "project_link": "nonebot_plugin_monitor",
+    "name": "监测群事件",
+    "desc": "监测群成员变动、文件上传、红包运气王、管理员变动等等...",
+    "author": "he0119",
+    "homepage": "https://github.com/cjladmin/nonebot_plugin_monitor",
+    "tags": [],
+    "is_official": false
   }
 ]
