@@ -1,0 +1,20 @@
+name: Poetry prerelease
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install poetry
+      run: pipx install poetry --pip-args=--pre
+    - run: poetry config virtualenvs.prefer-active-python true
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+        cache: 'poetry'
+    - run: poetry install
+    - run: python -V
+    - run: poetry run python -V
