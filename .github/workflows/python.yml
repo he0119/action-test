@@ -5,7 +5,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
     steps:
     - uses: actions/checkout@v3
     - name: Install poetry
@@ -13,7 +18,7 @@ jobs:
     - run: poetry config virtualenvs.prefer-active-python true
     - uses: actions/setup-python@v3
       with:
-        python-version: '3.9'
+        python-version: ${{ matrix.python-version }}
         cache: 'poetry'
     - run: poetry install
     - run: python -V
