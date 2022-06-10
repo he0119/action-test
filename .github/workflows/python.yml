@@ -16,7 +16,7 @@ jobs:
     - name: Install poetry
       run: pipx install poetry --pip-args=--pre
     - run: poetry config virtualenvs.prefer-active-python true
-    - uses: actions/setup-python@main
+    - uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'poetry'
