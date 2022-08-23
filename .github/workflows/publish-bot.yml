@@ -55,7 +55,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: NoneBot2 Publish Bot
-        uses: docker://ghcr.io/nonebot/nonebot2-publish-bot:dev
+        uses: nonebot/nonebot2-publish-bot@fix/change-title
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config: >
