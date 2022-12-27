@@ -7,34 +7,26 @@ on:
     types: [closed]
 
 jobs:
-  test:
+  plugin_test:
     runs-on: ubuntu-latest
     name: nonebot2 plugin test
     permissions:
       issues: read
+    outputs:
+      result: ${{ steps.plugin-test.outputs.RESULT }}
+      output: ${{ steps.plugin-test.outputs.OUTPUT }}
     steps:
-      - name: NoneBot2 Store Test
+      - name: NoneBot2 Plugin Test
+        id: plugin-test
         uses: docker://ghcr.io/he0119/nonebot2-store-test:master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
-#     permissions:
-#       actions: none
-#       checks: none
-#       contents: none
-#       deployments: none
-#       id-token: none
-#       issues: read
-#       discussions: none
-#       packages: none
-#       pages: none
-#       pull-requests: none
-#       repository-projects: none
-#       security-events: none
-#       statuses: none
+    needs: plugin_test
     steps:
+      - run: echo ${{needs.plugin_test.outputs.result}} ${{needs.plugin_test.outputs.output}}
       - name: Checkout code
         uses: actions/checkout@v2
       - name: NoneBot2 Publish Bot
