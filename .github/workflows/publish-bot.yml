@@ -13,7 +13,13 @@ jobs:
     permissions:
       issues: read
     steps:
+      - name: NoneBot2 Store Test
+        uses: docker://ghcr.io/he0119/nonebot2-store_test:master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - run: printenv
+      - name: Checkout code
+        uses: actions/checkout@v3
       - run: |
           ls -la
           touch test.file
@@ -22,10 +28,6 @@ jobs:
           git add .
           git commit -m test
           git push
-      - name: NoneBot2 Store Test
-        uses: docker://ghcr.io/he0119/nonebot2-store_test:master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
