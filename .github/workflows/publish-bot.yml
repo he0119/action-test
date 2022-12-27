@@ -14,7 +14,7 @@ jobs:
       issues: read
     steps:
       - name: NoneBot2 Store Test
-        uses: docker://ghcr.io/he0119/nonebot2-store_test:master
+        uses: docker://ghcr.io/he0119/nonebot2-store-test:master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: printenv
