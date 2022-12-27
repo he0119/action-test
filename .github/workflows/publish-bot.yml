@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: test permissions
+    name: nonebot2 plugin test
     permissions:
       issues: read
     steps:
@@ -17,17 +17,6 @@ jobs:
         uses: docker://ghcr.io/he0119/nonebot2-store-test:master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: printenv
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - run: |
-          ls -la
-          touch test.file
-          git config --global user.name test
-          git config --global user.email test@example.com
-          git add .
-          git commit -m test
-          git push
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
