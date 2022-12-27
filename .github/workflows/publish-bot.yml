@@ -26,10 +26,6 @@ jobs:
     name: nonebot2 publish bot
     needs: plugin_test
     steps:
-      - run: echo $PLUGIN_RESULT $PLUGIN_OUTPUT
-        env:
-          PLUGIN_RESULT: ${{ needs.plugin_test.outputs.result }}
-          PLUGIN_OUTPUT: ${{ needs.plugin_test.outputs.output }}
       - name: Checkout code
         uses: actions/checkout@v2
       - name: NoneBot2 Publish Bot
@@ -43,3 +39,6 @@ jobs:
               "bot_path": "nonebot/bots.json",
               "adapter_path": "nonebot/adapters.json"
             }
+        env:
+          PLUGIN_RESULT: ${{ needs.plugin_test.outputs.result }}
+          PLUGIN_OUTPUT: ${{ needs.plugin_test.outputs.output }}
