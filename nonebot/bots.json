@@ -1,8 +1,10 @@
 [
   {
-    "name": "123123",
-    "desc": "123123",
-    "author": "he0119",
-    "repo": "test"
+    "name": "HarukaBot",
+    "desc": "将B站UP主的动态和直播信息推送至QQ",
+    "author": "SK-415",
+    "homepage": "https://github.com/SK-415/HarukaBot",
+    "tags": [],
+    "is_official": false
   }
 ]
