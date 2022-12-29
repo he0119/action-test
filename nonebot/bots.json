@@ -6,5 +6,13 @@
     "homepage": "https://github.com/SK-415/HarukaBot",
     "tags": [],
     "is_official": false
+  },
+  {
+    "name": "RanBot",
+    "desc": "不@会很安静的Bot",
+    "author": "he0119",
+    "homepage": "https://github.com/Hecatia-Hell-Workshop/RanBot",
+    "tags": [],
+    "is_official": false
   }
 ]
