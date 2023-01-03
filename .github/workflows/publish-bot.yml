@@ -7,13 +7,15 @@ on:
     types: [closed]
   issue_comment:
     types: [created]
+  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   plugin_test:
     runs-on: ubuntu-latest
     name: nonebot2 plugin test
-    permissions:
-      issues: read
     outputs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
