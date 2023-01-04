@@ -21,6 +21,7 @@ jobs:
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
     steps:
       - name: Install poetry
+        if: github.event_name != 'pull_request'
         run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
