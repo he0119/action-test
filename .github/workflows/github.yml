@@ -1,12 +1,16 @@
-name: 'Test'
+name: 'Github'
 
 on:
+  issues:
+    types: [opened, reopened, edited]
+  pull_request_target:
+    types: [closed]
   issue_comment:
     types: [created]
 
 jobs:
-  test:
-    name: Test
+  github:
+    name: github
     runs-on: ubuntu-latest
     steps:
     - name: Dump GitHub context
