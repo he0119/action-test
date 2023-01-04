@@ -16,12 +16,13 @@ jobs:
   plugin_test:
     runs-on: ubuntu-latest
     name: nonebot2 plugin test
+    if: github.event_name != 'issue_comment' || event.issue.pull_request != null
     outputs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
     steps:
       - name: Install poetry
-        if: github.event_name != 'pull_request'
+        if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
