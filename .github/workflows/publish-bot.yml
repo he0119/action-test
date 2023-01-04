@@ -16,7 +16,7 @@ jobs:
   plugin_test:
     runs-on: ubuntu-latest
     name: nonebot2 plugin test
-    if: github.event_name != 'issue_comment' || github.event.issue.pull_request
+    if: github.event_name != 'issue_comment' || !github.event.issue.pull_request
     outputs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
