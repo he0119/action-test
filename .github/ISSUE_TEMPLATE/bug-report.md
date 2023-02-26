@@ -1,7 +1,7 @@
 ---
-name: Bug report
-about: Create a bug report to help us improve
-title: 'Bug: 出现什么问题'
+name: 回报错误
+about: 在使用中遇到了错误
+title: 'Bug: 出现什么错误'
 labels: bug
 assignees: ''
 
@@ -9,25 +9,23 @@ assignees: ''
 
 ### 描述问题
 
-A clear and concise description of what the bug is.
+出现了什么问题？
 
 ### 如何复现？
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+简洁清晰的重现步骤能够帮助我们更迅速地定位问题所在。
 
 ### 期望的结果
 
-A clear and concise description of what you expected to happen.
+如果一切正常，该是什么样的？
 
 ### 环境信息
 
 - OS: [e.g. Linux]
-- Python Version: [e.g. 3.8]
-- Nonebot Version: [e.g. 2.0.0]
+- Python 版本: [e.g. 3.8]
+- Nonebot 版本: [e.g. 2.0.0]
+- 插件版本: [e.g. 1.0.0]
 
 ### 截图或日志
 
-If applicable, add screenshots to help explain your problem.
+如果可以的话，请提供相关的截图或者日志。
