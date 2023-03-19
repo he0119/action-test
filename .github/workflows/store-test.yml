@@ -1,0 +1,48 @@
+name: 'NoneBot2 Publish Bot'
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: 'Start index'
+        required: false
+        default: '0'
+      length:
+        description: 'Test length'
+        required: false
+        default: '50'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  plugin_test:
+    runs-on: ubuntu-latest
+    name: nonebot2 plugin test
+    if: github.event_name != 'issue_comment' || !github.event.issue.pull_request
+    outputs:
+      result: ${{ steps.plugin-test.outputs.RESULT }}
+      output: ${{ steps.plugin-test.outputs.OUTPUT }}
+    steps:
+      - name: Install poetry
+        if: ${{ !startsWith(github.event_name, 'pull_request') }}
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Test Plugin
+        id: plugin-test
+        run: |
+          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/plugin_test.py -o plugin_test.py
+          python plugin_test.py ${{ github.event.inputs.start }} ${{ github.event.inputs.length }}
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ${{ github.workspace }}/results.json
+      - name: Upload output
+        uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: ${{ github.workspace }}/output
