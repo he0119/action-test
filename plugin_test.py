@@ -190,6 +190,8 @@ async def main():
     argv = sys.argv
     start = int(argv[1])
     length = int(argv[2])
+    output_path = Path("output")
+    output_path.mkdir(exist_ok=True)
     # 测试插件
     test_results = {}
     for i, (project_link, module_name) in enumerate(list(PLUGINS.items())[start:]):
@@ -198,7 +200,7 @@ async def main():
         test = PluginTest(project_link, module_name)
         result, output = await test.run()
         test_results[project_link] = result
-        with open(f"output/{project_link}.log", "w", encoding="utf8") as f:
+        with open(output_path / f"{project_link}.log", "w", encoding="utf8") as f:
             f.write(output)
         with open("results.json", "w", encoding="utf8") as f:
             json.dump(test_results, f, indent=2, ensure_ascii=False)

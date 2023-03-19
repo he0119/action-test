@@ -40,9 +40,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: results
-          path: ${{ github.workspace }}/results.json
-      - name: Upload output
-        uses: actions/upload-artifact@v3
-        with:
-          name: output
-          path: ${{ github.workspace }}/output
+          path: |
+            ${{ github.workspace }}/results.json
+            ${{ github.workspace }}/output
