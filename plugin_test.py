@@ -198,7 +198,7 @@ async def main():
         test = PluginTest(project_link, module_name)
         result, output = await test.run()
         test_results[project_link] = result
-        with open(test._path / "output.log", "w", encoding="utf8") as f:
+        with open(f"output/{project_link}.log", "w", encoding="utf8") as f:
             f.write(output)
         with open("results.json", "w", encoding="utf8") as f:
             json.dump(test_results, f, indent=2, ensure_ascii=False)
