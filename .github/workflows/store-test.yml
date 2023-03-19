@@ -1,4 +1,4 @@
-name: 'NoneBot2 Publish Bot'
+name: 'NoneBot2 Store Test'
 
 on:
   workflow_dispatch:
