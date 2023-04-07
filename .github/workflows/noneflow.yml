@@ -1,4 +1,4 @@
-name: 'NoneBot2 Publish Bot'
+name: NoneFlow
 
 on:
   issues:
@@ -42,9 +42,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: NoneBot2 Publish Bot
-        uses: docker://ghcr.io/nonebot/nonebot2-publish-bot:main
+        uses: docker://ghcr.io/nonebot/noneflow:main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           config: >
             {
               "base": "main",
@@ -55,9 +54,6 @@ jobs:
         env:
           PLUGIN_TEST_RESULT: ${{ needs.plugin_test.outputs.result }}
           PLUGIN_TEST_OUTPUT: ${{ needs.plugin_test.outputs.output }}
-          GITHUB_APPS: >
-            [{
-              "app_id": "${{ secrets.APP_ID }}",
-              "private_key": "${{ secrets.APP_KEY }}"
-            }]
+          APP_ID: ${{ secrets.APP_ID }}
+          PRIVATE_KEY: ${{ secrets.APP_KEY }}
           LOG_LEVEL: "DEBUG"
