@@ -53,4 +53,4 @@ jobs:
         env:
           PLUGIN_TEST_RESULT: ${{ needs.plugin_test.outputs.result }}
           PLUGIN_TEST_OUTPUT: ${{ needs.plugin_test.outputs.output }}
-          GITHUB_APPS: "[{\"client_id\": ${{ secrets.client_id }}, \"client_secret\": ${{ secrets.client_secret }} }]"
+          GITHUB_APPS: ${{ secrets.MY_GITHUB_APPS }}
