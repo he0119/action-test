@@ -39,14 +39,18 @@ jobs:
     name: nonebot2 publish bot
     if: |
       ${{
-        !(github.event.pull_request
-          && (github.event.pull_request.head.repo.fork
-            || !(contains(github.event.pull_request.labels.*.name, 'Plugin')
-              || contains(github.event.pull_request.labels.*.name, 'Adapter')
-              || contains(github.event.pull_request.labels.*.name, 'Bot'))
+        !(
+          github.event.pull_request &&
+          (
+            github.event.pull_request.head.repo.fork ||
+            !(
+              contains(github.event.pull_request.labels.*.name, 'Plugin') ||
+              contains(github.event.pull_request.labels.*.name, 'Adapter') ||
+              contains(github.event.pull_request.labels.*.name, 'Bot')
             )
           )
-       }}
+        )
+      }}
     needs: plugin_test
     steps:
       - name: Checkout code
