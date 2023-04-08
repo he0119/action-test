@@ -37,6 +37,7 @@ jobs:
   publish_bot:
     runs-on: ubuntu-latest
     name: nonebot2 publish bot
+    if: !github.event.pull_request.head.repo.fork
     needs: plugin_test
     steps:
       - name: Checkout code
