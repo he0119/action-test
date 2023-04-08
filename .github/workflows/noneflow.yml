@@ -23,14 +23,7 @@ jobs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
     steps:
-      - run: echo ${{ github.event.pull_request }}
-      - run: echo ${{ github.event.pull_request && (github.event.pull_request.head.repo.fork || true)  }}
-      - run: echo ${{ github.event.pull_request.head.repo.fork }}
-      - run: echo ${{ github.event.pull_request.labels }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Plugin') }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Adapter') }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Bot') }}
-      - run: echo ${{ !(contains(github.event.pull_request.labels.*.name, 'Plugin') || contains(github.event.pull_request.labels.*.name, 'Adapter') || contains(github.event.pull_request.labels.*.name, 'Bot') ) }}
+      - run: echo ${{ !(github.event.pull_request && (github.event.pull_request.head.repo.fork || !(contains(github.event.pull_request.labels.*.name, 'Plugin') || contains(github.event.pull_request.labels.*.name, 'Adapter') || contains(github.event.pull_request.labels.*.name, 'Bot')))) }}
       - name: Install poetry
         if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
