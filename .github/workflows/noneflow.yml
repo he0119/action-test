@@ -53,6 +53,13 @@ jobs:
       }}
     needs: plugin_test
     steps:
+      - run: echo ${{ github.event.pull_request }}
+      - run: echo ${{ github.event.pull_request.head.repo.fork }}
+      - run: echo ${{ github.event.pull_request.labels }}
+      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Plugin') }}
+      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Adapter') }}
+      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Bot') }}
+      - run: echo ${{ !(contains(github.event.pull_request.labels.*.name, 'Plugin') || contains(github.event.pull_request.labels.*.name, 'Adapter') || contains(github.event.pull_request.labels.*.name, 'Bot') ) }}
       - name: Checkout code
         uses: actions/checkout@v3
       - name: NoneBot2 Publish Bot
