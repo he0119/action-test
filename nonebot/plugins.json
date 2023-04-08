@@ -1,20 +1,5 @@
 [
   {
-    "module_name": "nonebot_plugin_status",
-    "project_link": "nonebot-plugin-status",
-    "name": "服务器状态查看",
-    "desc": "通过戳一戳获取服务器状态",
-    "author": "yanyongyu",
-    "homepage": "https://github.com/cscs181/QQ-GitHub-Bot/tree/master/src/plugins/nonebot_plugin_status",
-    "tags": [
-      {
-        "label": "t:server",
-        "color": "#aeeaa8"
-      }
-    ],
-    "is_official": true
-  },
-  {
     "module_name": "haruka_bot",
     "project_link": "haruka-bot",
     "name": "HarukaBot",
