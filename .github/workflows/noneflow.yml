@@ -42,8 +42,8 @@ jobs:
         !(github.event.pull_request
           && (github.event.pull_request.head.repo.fork
             || !(contains(github.event.pull_request.labels.*.name, 'Plugin')
-              && contains(github.event.pull_request.labels.*.name, 'Adapter')
-              && contains(github.event.pull_request.labels.*.name, 'Bot'))
+              || contains(github.event.pull_request.labels.*.name, 'Adapter')
+              || contains(github.event.pull_request.labels.*.name, 'Bot'))
             )
           )
        }}
