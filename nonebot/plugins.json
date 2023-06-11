@@ -1666,5 +1666,19 @@
       }
     ],
     "is_official": false
+  },
+  {
+    "module_name": "nonebot_plugin_audiocraft",
+    "project_link": "nonebot-plugin-audiocraft",
+    "name": "AI作曲",
+    "desc": "Nonebot框架下的AI作曲插件",
+    "author": "he0119",
+    "homepage": "https://github.com/Alpaca4610/nonebot-plugin-audiocraft",
+    "tags": [],
+    "is_official": false,
+    "type": "application",
+    "supported_adapters": [
+      "nonebot.adapters.onebot.v11"
+    ]
   }
 ]
