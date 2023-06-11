@@ -30,3 +30,10 @@ body:
       value: "[]"
     validations:
       required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: 插件配置项
+      description: 插件配置项
+      render: Dotenv
