@@ -22,15 +22,8 @@ jobs:
     outputs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
       output: ${{ steps.plugin-test.outputs.OUTPUT }}
+      metadata: ${{ steps.plugin-test.outputs.METADATA }}
     steps:
-      - run: echo ${{ github.event.pull_request }}
-      - run: echo ${{ github.event.pull_request && (github.event.pull_request.head.repo.fork || true)  }}
-      - run: echo ${{ github.event.pull_request.head.repo.fork }}
-      - run: echo ${{ github.event.pull_request.labels }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Plugin') }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Adapter') }}
-      - run: echo ${{ contains(github.event.pull_request.labels.*.name, 'Bot') }}
-      - run: echo ${{ !(contains(github.event.pull_request.labels.*.name, 'Plugin') || contains(github.event.pull_request.labels.*.name, 'Adapter') || contains(github.event.pull_request.labels.*.name, 'Bot') ) }}
       - name: Install poetry
         if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
@@ -76,5 +69,6 @@ jobs:
         env:
           PLUGIN_TEST_RESULT: ${{ needs.plugin_test.outputs.result }}
           PLUGIN_TEST_OUTPUT: ${{ needs.plugin_test.outputs.output }}
+          PLUGIN_TEST_METADATA: ${{ needs.plugin_test.outputs.metadata }}
           APP_ID: ${{ secrets.APP_ID }}
           PRIVATE_KEY: ${{ secrets.APP_KEY }}
