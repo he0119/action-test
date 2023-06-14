@@ -1666,5 +1666,17 @@
       }
     ],
     "is_official": false
+  },
+  {
+    "module_name": "nonebot_plugin_bili_push",
+    "project_link": "nonebot-plugin-bili-push",
+    "name": "bili_push",
+    "desc": "推送b站动态",
+    "author": "he0119",
+    "homepage": "https://github.com/SuperGuGuGu/nonebot_plugin_bili_push",
+    "tags": [],
+    "is_official": false,
+    "type": "application",
+    "supported_adapters": ["nonebot.adapters.onebot.v11"]
   }
 ]
