@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     name: nonebot2 plugin test
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: nonebot/noneflow
+          ref: feat/store-test
       - name: Install poetry
         if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
@@ -26,8 +31,8 @@ jobs:
       - name: Test Plugin
         id: plugin-test
         run: |
-          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2-publish-bot/feat/store-test/plugin_test.py -o plugin_test.py
-          python plugin_test.py --store --offset ${{ github.event.inputs.offset }} --limit ${{ github.event.inputs.limit }}
+          poetry install
+          poetry run python plugin_test.py --store --offset ${{ github.event.inputs.offset }} --limit ${{ github.event.inputs.limit }}
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
