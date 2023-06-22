@@ -37,6 +37,4 @@ jobs:
         with:
           name: results
           path: |
-            ${{ github.workspace }}/plugin_test/index.html
             ${{ github.workspace }}/plugin_test/results.json
-            ${{ github.workspace }}/plugin_test/output
