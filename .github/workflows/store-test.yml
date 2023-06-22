@@ -21,7 +21,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: nonebot/noneflow
-          ref: feat/store-test
       - name: Install poetry
         if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
@@ -32,7 +31,7 @@ jobs:
         id: plugin-test
         run: |
           poetry install
-          poetry run python plugin_test.py --store --offset ${{ github.event.inputs.offset }} --limit ${{ github.event.inputs.limit }}
+          poetry run python -m src.utils.store_test --offset ${{ github.event.inputs.offset }} --limit ${{ github.event.inputs.limit }} -f
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
