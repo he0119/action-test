@@ -33,7 +33,7 @@ jobs:
       - name: Test Plugin
         id: plugin-test
         run: |
-          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2-publish-bot/main/src/utils/plugin_test.py -o plugin_test.py
+          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2-publish-bot/fix/test-config/src/utils/plugin_test.py -o plugin_test.py
           python plugin_test.py
   publish_bot:
     runs-on: ubuntu-latest
