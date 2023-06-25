@@ -1,41 +1,65 @@
-name: 'NoneBot2 Store Test'
+name: "NoneBot Store Test"
 
 on:
   workflow_dispatch:
     inputs:
       offset:
-        description: 'Offset'
+        description: "Offset"
         required: false
-        default: '0'
+        default: "0"
       limit:
-        description: 'Limit'
+        description: "Limit"
         required: false
-        default: '1'
+        default: "1"
+      args:
+        description: "Args"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 */4 * * *"
+  repository_dispatch:
+    types: [registry_update]
+
+concurrency:
+  group: "store-test"
+  cancel-in-progress: false
 
 jobs:
-  plugin_test:
+  store_test:
     runs-on: ubuntu-latest
-    name: nonebot2 plugin test
+    name: NoneBot2 plugin test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           repository: nonebot/noneflow
-          ref: fix/poetry-color
       - name: Install poetry
-        if: ${{ !startsWith(github.event_name, 'pull_request') }}
         run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - name: Test Plugin
-        id: plugin-test
+      - name: Prepare test
         run: |
           poetry install
-          poetry run python -m src.utils.store_test --offset ${{ github.event.inputs.offset }} --limit ${{ github.event.inputs.limit }} -f
+          mkdir -p plugin_test/store
+          curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/results.json -o plugin_test/store/results.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/registry/main/inputs/configs.json -o plugin_test/store/configs.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2/master/website/static/plugins.json -o plugin_test/store/plugins.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2/master/website/static/bots.json -o plugin_test/bots.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/nonebot2/master/website/static/adapters.json -o plugin_test/adapters.json
+      - name: Test plugin
+        if: ${{ !contains(fromJSON('["Bot", "Adapter", "Plugin"]'), github.event.client_payload.type) }}
+        run: |
+          poetry run python -m src.utils.store_test --offset ${{ github.event.inputs.offset || 0 }} --limit ${{ github.event.inputs.limit || 50 }} ${{ github.event.inputs.args }}
+      - name: Update registry(Plugin)
+        if: github.event.client_payload.type == 'Plugin'
+        run: poetry run python -m src.utils.store_test -k ${{ github.event.client_payload.key }}
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
           name: results
           path: |
             ${{ github.workspace }}/plugin_test/results.json
+            ${{ github.workspace }}/plugin_test/plugins.json
+            ${{ github.workspace }}/plugin_test/bots.json
+            ${{ github.workspace }}/plugin_test/adapters.json
