@@ -668,9 +668,7 @@
       "usage": "mc list 查看当前会话（群/私聊）的关注服务器列表\nmc add server address 添加服务器到当前会话（群/私聊）的关注服务器列表\nmc remove server 从当前会话（群/私聊）的关注服务器列表移除服务器\nmc check address 查看指定地址的服务器状态（一次性）",
       "type": "application",
       "homepage": "https://github.com/nonepkg/plugin-mcstatus",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\ntags -&gt; 0 -&gt; label\n  标签名称过长&lt;dt&gt;请确保标签名称不超过 10 个字符。&lt;/dt&gt; (type=value_error)",
     "validation_raw_data": {
@@ -683,9 +681,7 @@
       "tags": "[{\"label\": \"t:Minecraft\", \"color\": \"#80070B\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_mcstatus",
@@ -2275,9 +2271,7 @@
       "usage": "具体看文档\n    问答教学: [模糊|全局|正则|@]问...答...\n    删除词条: 删除[模糊|全局|正则|@]词条 问句\n    删除词库: /删除词库 /删除全局词库 /删除全部词库\n    查询词条: 查询[群|用户]{id}[全局][模糊|正则]词库\n        查询[模糊|正则]词库\n    ",
       "type": "application",
       "homepage": "https://github.com/kexue-z/nonebot-plugin-word-bank2",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -2290,9 +2284,7 @@
       "tags": "[{\"label\": \"a:onebot\", \"color\": \"#ff0000\"}, {\"label\": \"wordbank\", \"color\": \"#0b00ff\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_word_bank2",
@@ -2334,9 +2326,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-txt2img": {
@@ -3951,9 +3941,7 @@
       "usage": "^(setu|色图|涩图|想色色|来份色色|来份色图|想涩涩|多来点|来点色图|来张setu|来张色图|来点色色|色色|涩涩)\\s?([x|✖️|×|X|*]?\\d+[张|个|份]?)?\\s?(r18)?\\s?(.*)?",
       "type": "application",
       "homepage": "https://github.com/Special-Week/nonebot_plugin_setu4",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -3966,9 +3954,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_setu4",
@@ -3992,9 +3978,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-smart-reply": {
@@ -4007,9 +3991,7 @@
       "usage": "\nopenai [文本]  # 使用openai的api进行交互\nbing [文本]  # 使用new bing的api进行交互\n@bot [文本]  # 使用词库进行交互\n添加关键词 [关键词] 答 [回复]  # 添加自带词库的关键词\n删除关键词 [关键词]  # 删除自带词库的关键词\n删除关键词 [关键词] 删 [回复]  # 删除自带词库的关键词的一个回复\n查看所有关键词  # 查看自带词库的所有关键词\n查看关键词 [关键词]  # 查看自带词库的关键词的所有回复\n重置bing  # 重置bing的会话\n重置openai  # 重置openai的会话\n重置会话  # 重置bing和openai的会话\n群内戳一戳bot  # 戳一戳bot触发\n",
       "type": "application",
       "homepage": "https://github.com/Special-Week/nonebot_plugin_smart_reply",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -4022,9 +4004,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_smart_reply",
@@ -4048,9 +4028,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-today-in-history": {
@@ -4102,9 +4080,7 @@
       "usage": "磁力搜索 xxx",
       "type": "application",
       "homepage": "https://github.com/Special-Week/nonebot_plugin_BitTorrent",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -4117,9 +4093,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_BitTorrent",
@@ -4143,9 +4117,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-namelist": {
@@ -4551,9 +4523,7 @@
       "usage": "装载 PicMenu 插件即可查看本插件详细菜单",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-bawiki",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -4566,9 +4536,7 @@
       "tags": "[{\"label\": \"t:\\u78a7\\u84dd\\u6863\\u6848\", \"color\": \"#00d7fb\"}, {\"label\": \"t:\\u851a\\u85cd\\u6a94\\u6848\", \"color\": \"#00d7fb\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_bawiki",
@@ -4610,9 +4578,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-mcqq": {
@@ -4625,9 +4591,7 @@
       "usage": "在群聊发送消息即可同步至 Minecraft 服务器",
       "type": "application",
       "homepage": "https://github.com/17TheWord/nonebot-plugin-mcqq",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\nplugin_test_result\n  ⚠️ 插件加载测试未通过。&lt;details&gt;&lt;summary&gt;测试输出&lt;/summary&gt;&lt;/details&gt; (type=value_error)",
     "validation_raw_data": {
@@ -4640,9 +4604,7 @@
       "tags": "[{\"label\": \"Minecraft\", \"color\": \"#52ea6f\"}, {\"label\": \"\\u6d88\\u606f\\u4e92\\u901a\", \"color\": \"#52eadf\"}]",
       "plugin_test_result": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_mcqq",
@@ -5600,9 +5562,7 @@
       "usage": "指令：\n    扔漂流瓶 [文本/图片]\n    寄漂流瓶 [文本/图片] （同扔漂流瓶，防止指令冲突用）\n    捡漂流瓶\n    评论漂流瓶 [漂流瓶编号] [文本]\n    举报漂流瓶 [漂流瓶编号]\n    查看漂流瓶 [漂流瓶编号]\n    删除漂流瓶 [漂流瓶编号]\n    我的漂流瓶\nSUPERUSER指令：\n    清空漂流瓶\n    恢复漂流瓶 [漂流瓶编号]\n    删除漂流瓶评论 [漂流瓶编号] [QQ号]\n    漂流瓶白名单 [QQ / 群聊 / 举报] [QQ号 / 群号]\n    漂流瓶黑名单 [QQ / 群聊] [QQ号 / 群号]\n    漂流瓶详情 [漂流瓶编号]",
       "type": "application",
       "homepage": "https://github.com/Todysheep/nonebot_plugin_bottle",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -5615,9 +5575,7 @@
       "tags": "[{\"label\": \"\\u6f02\\u6d41\\u74f6\", \"color\": \"#0893f2\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_bottle",
@@ -5651,9 +5609,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-tts-gal": {
@@ -6410,10 +6366,7 @@
       "usage": "对局：\n- /新建对局 [四人南|四人东]\n- /结算对局 <成绩> [对局<编号>] [@<用户>] [<自风>]\n- /撤销结算对局 [对局<编号>] [@<用户>]\n- /设置对局PT <PT> [对局<编号>] [@<用户>]\n- /删除对局 [对局<编号>]\n- /设置对局进度 <东/南x局y本场 或 完成> [对局<编号>]\n- /设置对局备注 [对局<编号>] <备注文本>\n\n对局查询：\n- /查询对局 [<编号>]\n- /个人最近对局 [@<用户>]\n- /群最近对局\n- /个人未完成对局 [@<用户>]\n- /群未完成对局\n- /导出赛季对局 [<赛季代号>]\n- /导出所有对局\n\n赛季：\n- /查询赛季 [<代号>]\n- /查询所有赛季\n- /新建赛季\n- /开启赛季 [<代号>]\n- /结束赛季\n- /删除赛季 [<代号>]\n\n赛季查询：\n- /查询榜单 [<赛季代号>]\n- /导出榜单 [<赛季代号>]\n- /查询PT [@<用户>]\n- /设置PT <PT> [@<用户>]\n- /重置PT [@<用户>]\n\n数据统计：\n- /对战数据 [@<用户>]\n- /赛季对战数据 [<赛季代号>] [@<用户>]\n- /最近走势 [@<用户>]\n\n以上命令格式中，以<>包裹的表示一个参数，以[]包裹的表示一个可选项。\n\n详细说明：参见https://github.com/ssttkkl/nonebot-plugin-mahjong-scoreboard",
       "type": "application",
       "homepage": "https://github.com/ssttkkl/nonebot-plugin-mahjong-scoreboard",
-      "supported_adapters": [
-        "~onebot.v11",
-        "~qqguild"
-      ]
+      "supported_adapters": ["~onebot.v11", "~qqguild"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\nhomepage\n  ⚠️ 项目 &lt;a href=\"https://github.com/ssttkkl/nonebot-plugin-mahjong-scoreboard\"&gt;主页&lt;/a&gt; 返回状态码 301。&lt;dt&gt;请确保您的项目主页可访问。&lt;/dt&gt; (type=value_error)",
     "validation_raw_data": {
@@ -6426,10 +6379,7 @@
       "tags": "[{\"label\": \"a:onebot\", \"color\": \"#4684d3\"}, {\"label\": \"t:\\u65e5\\u9ebb\", \"color\": \"#4684d3\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11",
-        "~qqguild"
-      ]
+      "supported_adapters": ["~onebot.v11", "~qqguild"]
     },
     "previous": {
       "module_name": "nonebot_plugin_mahjong_scoreboard",
@@ -7850,9 +7800,7 @@
       "usage": "\n    查询：【关键词】([序号])\n    ",
       "type": "application",
       "homepage": "https://github.com/Agnes4m/nonebot_plugin_l4d2_server",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\nplugin_test_result\n  ⚠️ 插件加载测试未通过。&lt;details&gt;&lt;summary&gt;测试输出&lt;/summary&gt;&lt;/details&gt; (type=value_error)",
     "validation_raw_data": {
@@ -7865,9 +7813,7 @@
       "tags": "[{\"label\": \"l4d2\", \"color\": \"#05ff00\"}]",
       "plugin_test_result": false,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_l4d2_server",
@@ -7898,9 +7844,7 @@
       "usage": "详见README",
       "type": "application",
       "homepage": "https://github.com/CMHopeSunshine/nonebot-plugin-learning-chat",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -7913,9 +7857,7 @@
       "tags": "[{\"label\": \"a:onebot\", \"color\": \"#ea5252\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_learning_chat",
@@ -7949,9 +7891,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-couplets": {
@@ -8588,9 +8528,7 @@
       "usage": "使用 motd 指令查看使用帮助",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-picmcstat",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -8603,9 +8541,7 @@
       "tags": "[{\"label\": \"Minecraft\", \"color\": \"#7fbf55\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_picmcstat",
@@ -8639,9 +8575,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-wantwords": {
@@ -8799,9 +8733,7 @@
       "usage": "在群聊发送消息即可同步",
       "type": "application",
       "homepage": "https://github.com/17TheWord/nonebot-plugin-group-link-guild",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\nplugin_test_result\n  ⚠️ 插件加载测试未通过。&lt;details&gt;&lt;summary&gt;测试输出&lt;/summary&gt;&lt;/details&gt; (type=value_error)",
     "validation_raw_data": {
@@ -8814,9 +8746,7 @@
       "tags": "[{\"label\": \"QQ\\u7fa4\", \"color\": \"#ea5252\"}, {\"label\": \"QQ\\u9891\\u9053\", \"color\": \"#52ead5\"}, {\"label\": \"\\u6d88\\u606f\\u4e92\\u901a\", \"color\": \"#50c545\"}]",
       "plugin_test_result": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_group_link_guild",
@@ -9104,9 +9034,7 @@
       "usage": "指令1: 嗦牛子 (给目标牛牛增加长度, 自己或者他人, 通过艾特选择对象, 没有at时目标是自己)\n        指令2: 打胶 | 开导 (给自己牛牛增加长度)\n        指令3: pk | 对决 (普通的pk,单纯的random实现输赢, 胜利方获取败方随机数/2的牛牛长度)\n        指令4: 查询 (目标牛牛长度, 自己或者他人, 通过艾特选择对象, 没有at时目标是自己)\n        指令5: jj排行榜 | jj排名 | jj榜单 | jjrank (字面意思, 输出倒数五位和前五位, 以及自己的排名)\n        指令6: 开启淫趴|禁止淫趴 (由管理员 | 群主 | SUPERUSERS开启或者关闭淫趴)\n        指令7: 日群友|透群友|日群主|透群主|日管理|透管理  (字面意思, 当使用透群友的时候如果at了人那么直接指定)\n        指令8: 注入查询 | 摄入查询 (查询目标被透注入的量，后接(历史|全部), 可查看总被摄入的量, 无艾特的时候是自己, 有at的时候是目标)\n        指令9: 淫趴介绍 | 淫趴说明| 淫趴帮助 (输出淫趴插件的命令列表)",
       "type": "application",
       "homepage": "https://github.com/Special-Week/nonebot_plugin_impact",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -9119,9 +9047,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_impact",
@@ -9145,9 +9071,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-mcping": {
@@ -9276,9 +9200,7 @@
       "usage": "这是一个一个一个自动回复插件啊啊啊",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-autoreply",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -9291,9 +9213,7 @@
       "tags": "[{\"label\": \"t:\\u81ea\\u52a8\\u56de\\u590d\", \"color\": \"#ea881e\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_autoreply",
@@ -9327,9 +9247,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-setu-collection": {
@@ -9488,9 +9406,7 @@
       "usage": "今天吃什么:随机推荐吃的\n\n    今天喝什么:随机推荐喝的\n\n    查看菜单:查看所有菜单\n\n    查看菜单 菜单名:查看具体菜单\n\n    查看饮料:查看所有饮料\n\n    查看饮料 饮料名:查看具体饮料\n\n    添加菜单 菜名:添加菜单\n\n    添加饮料 饮料名:添加饮料\n\n    删除菜单 菜名:删除菜单\n\n    删除饮料 饮料名:删除饮料",
       "type": "application",
       "homepage": "https://github.com/Cvandia/nonebot-plugin-whateat-pic",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -9503,9 +9419,7 @@
       "tags": "[{\"label\": \"t:\\u5403\\u4ec0\\u4e48\", \"color\": \"#e4ea52\"}, {\"label\": \"t:\\u559d\\u4ec0\\u4e48\", \"color\": \"#52ea8b\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_whateat_pic",
@@ -9547,9 +9461,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-matcher-block": {
@@ -9632,9 +9544,7 @@
       "usage": "指令：舞萌帮助",
       "type": "application",
       "homepage": "https://github.com/Agnes4m/nonebot_plugin_maimai",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\nplugin_test_result\n  ⚠️ 插件加载测试未通过。&lt;details&gt;&lt;summary&gt;测试输出&lt;/summary&gt;&lt;/details&gt; (type=value_error)",
     "validation_raw_data": {
@@ -9647,9 +9557,7 @@
       "tags": "[{\"label\": \"maimai\", \"color\": \"#5262ea\"}]",
       "plugin_test_result": false,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_maimai",
@@ -10264,9 +10172,7 @@
       "usage": "添加大学习",
       "type": "application",
       "homepage": "https://github.com/ZM25XC/nonebot_plugin_auto_teenstudy",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -10279,9 +10185,7 @@
       "tags": "[{\"label\": \"\\u9752\\u5e74\\u5927\\u5b66\\u4e60\", \"color\": \"#e8f710\"}, {\"label\": \"\\u591a\\u5730\\u533a\", \"color\": \"#108ef7\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_auto_teenstudy",
@@ -10323,9 +10227,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-60s": {
@@ -10380,9 +10282,7 @@
       "usage": "## 小爱课表帮助:\n- 我的/本周课表: 获取本周课表,也可以是下周\n- 导入课表: 使用小爱课程表分享的链接一键导入\n- 某日课表: 获取某日课表,如今日课表、周一课表\n- 更新课表: 更新本地课表信息,如果线上修改过小爱课表,发送该指令即可更新本地课表\n- 订阅/取消订阅xx课表: 可以订阅某天(如周一)的课表,在前一天晚上10点推送\n- 订阅/取消订阅早八: 订阅所有早八,在前一天晚上发出提醒\n- 订阅/取消订阅课程+课程名：订阅某节课程\n- 上课/下节课: 获取当前课程信息以及今天以内的下节课信息\n- 早八|明日早八: 查询明天的早八",
       "type": "application",
       "homepage": "https://github.com/maoxig/nonebot-plugin-ai-timetable",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -10395,9 +10295,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_ai_timetable",
@@ -10421,9 +10319,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-sanae": {
@@ -10620,9 +10516,7 @@
       "usage": "指令列表：\n注：以下指令后面带不带参数都可以，如果没带参数，Bot 将会询问你\n \n▶ unvcode\n  ▷ 介绍：反和谐超级武器，幼女 Code！\n  ▷ 指令：unvcode；幼女码\n \n▶ bnhhsh\n  ▷ 介绍：不对劲的拼音首字母缩写翻译工具！\n  ▷ 指令：bnhhsh；不能好好说话\n \n▶ yinglish\n  ▷ 介绍：淫语翻译机！\n  ▷ 指令：yinglish；淫语\n \n▶ not translator\n  ▷ 介绍：不会翻译机！\n  ▷ 指令：not translator；不会翻译",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-rimofun",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -10635,9 +10529,7 @@
       "tags": "[{\"label\": \"RimoChan\", \"color\": \"#f3e5bf\"}, {\"label\": \"bnhhsh\", \"color\": \"#ebbcc6\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_rimofun",
@@ -10679,9 +10571,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-customemote": {
@@ -10841,9 +10731,7 @@
       "usage": "XX历史卡池,XX版本卡池，详细查看本仓库readme",
       "type": "application",
       "homepage": "https://github.com/forchannot/nonebot-plugin-gshisbanner",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -10856,9 +10744,7 @@
       "tags": "[{\"label\": \"t:\\u539f\\u795e\", \"color\": \"#ea5252\"}, {\"label\": \"\\u5361\\u6c60\", \"color\": \"#52ea56\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_gshisbanner",
@@ -10900,9 +10786,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-unoconv": {
@@ -11397,9 +11281,7 @@
       "usage": "原神cos,CosPlus,下载cos",
       "type": "application",
       "homepage": "https://github.com/Cvandia/nonebot_plugin_genshin_cos",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -11412,9 +11294,7 @@
       "tags": "[{\"label\": \"t:\\u539f\\u795e\", \"color\": \"#f55400\"}, {\"label\": \"t:cos\", \"color\": \"#00d0f5\"}, {\"label\": \"t:coser\", \"color\": \"#eb1dd3\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_genshin_cos",
@@ -11464,9 +11344,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-chatgpt-plus": {
@@ -11690,9 +11568,7 @@
       "usage": "首先获取自己的Steam ID，\n        获取方法：\n            Steam 桌面网站或桌面客户端：点开右上角昵称下拉菜单，点击账户明细，即可看到 Steam ID\n            Steam 应用：点击右上角头像，点击账户明细，即可看到 Steam ID\n        \n        (如果有命令前缀，需要加上，一般为 / )    \n        绑定方法：\n            steam绑定/steam添加/steam.add [个人ID数值] \n            \n        删除方法：\n            steam解绑/steam删除/steam.del [个人ID数值] \n            \n        管理员命令：\n            steam列表/steam绑定列表 \t    \n            steam播报开启/steam播报打开  \n            steam播报关闭/steam播报停止 \t\n    ",
       "type": "application",
       "homepage": "https://github.com/nek0us/nonebot_plugin_steam_game_status",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -11705,9 +11581,7 @@
       "tags": "[{\"label\": \"t:Steam\", \"color\": \"#6690a5\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_steam_game_status",
@@ -11741,9 +11615,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-bilichat": {
@@ -12196,9 +12068,7 @@
       "usage": "使用 `akinator` 指令开始让我猜人物吧！",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-akinator",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -12211,9 +12081,7 @@
       "tags": "[{\"label\": \"t:Akinator\", \"color\": \"#6599fe\"}, {\"label\": \"t:\\u7f51\\u7edc\\u5929\\u624d\", \"color\": \"#6599fe\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_akinator",
@@ -12255,9 +12123,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-rename": {
@@ -12270,9 +12136,7 @@
       "usage": "查看本仓库readme",
       "type": "application",
       "homepage": "https://github.com/forchannot/nonebot_plugin_rename",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -12285,9 +12149,7 @@
       "tags": "[{\"label\": \"a:onebot\", \"color\": \"#ed4646\"}, {\"label\": \"\\u7fa4\\u540d\\u7247\", \"color\": \"#466bed\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_rename",
@@ -12329,9 +12191,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-appinsights": {
@@ -12482,10 +12342,7 @@
       "usage": "指令：查看画板、查看色板、画板作画\n详细说明请查看项目主页",
       "type": null,
       "homepage": "https://github.com/Aunly/nonebot-plugin-abot-place",
-      "supported_adapters": [
-        "~onebot.v11",
-        "~onebot.v12"
-      ]
+      "supported_adapters": ["~onebot.v11", "~onebot.v12"]
     },
     "validation_message": "1 validation error for PluginPublishInfo\ntype\n  ⚠️ 插件类型不能为空。&lt;dt&gt;请确保填写插件类型。&lt;/dt&gt; (type=value_error)",
     "validation_raw_data": {
@@ -12498,10 +12355,7 @@
       "tags": "[{\"label\": \"ABot\", \"color\": \"#52aaea\"}, {\"label\": \"Place\", \"color\": \"#ea6dda\"}]",
       "plugin_test_result": true,
       "type": null,
-      "supported_adapters": [
-        "~onebot.v11",
-        "~onebot.v12"
-      ]
+      "supported_adapters": ["~onebot.v11", "~onebot.v12"]
     },
     "previous": {
       "module_name": "nonebot_plugin_abot_place",
@@ -12566,9 +12420,7 @@
       "usage": "指令：\n        图片翻译 [图片] --翻译并返回翻译后的图片\n        多图片翻译 [图片]*n --翻译并返回多张翻译后的图片\n        切换翻译api [api] --将该api的优先级设为最高\n",
       "type": "application",
       "homepage": "https://github.com/maoxig/nonebot-plugin-manga-translator",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -12581,9 +12433,7 @@
       "tags": "[{\"label\": \"a:onebot\", \"color\": \"#ea5252\"}, {\"label\": \"t:\\u6f2b\\u753b\\u7ffb\\u8bd1\", \"color\": \"#527bea\"}, {\"label\": \"t:\\u56fe\\u7247\\u7ffb\\u8bd1\", \"color\": \"#c452ea\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_manga_translator",
@@ -12633,9 +12483,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-watermarker": {
@@ -12717,9 +12565,7 @@
       "usage": "^(?=.*[a-zA-Z])(?=.*_)[a-zA-Z_]+(#(?=[a-zA-Z]+$)[a-zA-Z]*)?$",
       "type": "application",
       "homepage": "https://github.com/Special-Week/Hinata-Bot/tree/main/src/plugins/wordle_help",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -12732,9 +12578,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_wordle_help",
@@ -12758,9 +12602,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-csgo-case-simulator": {
@@ -13160,9 +13002,7 @@
       "usage": "指令列表：\n▶ 点歌 [歌曲名 / 音乐 ID]\n    ▷ 介绍：搜索歌曲。当输入音乐 ID 时会直接发送对应音乐\n    ▷ 别名：`网易云`、`wyy`\n▶ 电台 [歌曲名 / 节目 ID]\n    ▷ 介绍：搜索电台节目。当输入电台 ID 时会直接发送对应节目\n    ▷ 别名：`声音`、`网易电台`、`wydt`、`wydj`\n▶ 解析 [回复 音乐卡片 / 链接]\n    ▷ 介绍：获取该音乐的播放链接并使用自定义卡片发送\n    ▷ 别名：`resolve`、`parse`、`get`\n▶ 歌词 [回复 音乐卡片 / 链接]\n    ▷ 介绍：获取该音乐的歌词，以图片形式发送\n    ▷ 别名：`lrc`、`lyric`、`lyrics`\n▶ 链接 [回复 音乐卡片]\n    ▷ 介绍：获取 Bot 发送的音乐卡片的网易云歌曲链接\n    ▷ 别名：`link`、`url`\n \nTip：\n▶ 点击 Bot 发送的音乐卡片会跳转到音乐直链，可以直接下载\n▶ 使用需要回复音乐卡片的指令时，如果没有回复，会自动使用你触发发送的最近一个音乐卡片的信息",
       "type": "application",
       "homepage": "https://github.com/lgc-NB2Dev/nonebot-plugin-multincm",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13175,9 +13015,7 @@
       "tags": "[{\"label\": \"t:\\u7f51\\u6613\\u4e91\", \"color\": \"#ea5252\"}, {\"label\": \"t:ncm\", \"color\": \"#ea5252\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_multincm",
@@ -13219,9 +13057,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-smallapi": {
@@ -13483,9 +13319,7 @@
       "usage": "命令头: {lag, 找规律}  / {homonumber, 臭数字}  eg: 找规律 1 2 3 4 5 6 7 114514 1919810  / homonumber 2749903559",
       "type": "application",
       "homepage": "https://github.com/Special-Week/Hinata-Bot/tree/main/src/plugins/homo_mathematician",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13498,9 +13332,7 @@
       "tags": "[]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_homo_mathematician",
@@ -13524,9 +13356,7 @@
       "tags": [],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-puzzle": {
@@ -13755,10 +13585,7 @@
       "usage": "无",
       "type": "application",
       "homepage": "https://github.com/bot-ssttkkl/nonebot-plugin-escape-url",
-      "supported_adapters": [
-        "~onebot.v11",
-        "~qqguild"
-      ]
+      "supported_adapters": ["~onebot.v11", "~qqguild"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13771,10 +13598,7 @@
       "tags": "[{\"label\": \"a:OneBot\", \"color\": \"#5293ea\"}, {\"label\": \"a:QQGuild\", \"color\": \"#5293ea\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11",
-        "~qqguild"
-      ]
+      "supported_adapters": ["~onebot.v11", "~qqguild"]
     },
     "previous": {
       "module_name": "nonebot_plugin_escape_url",
@@ -13832,9 +13656,7 @@
       "usage": "\n|     指令    |权限|需要@|   范围   | 说明 |\n|   关注推主   |无 | 否  | 群聊/私聊 | 关注，指令格式：“关注推主 <推主id> [r18]” r18为可选参数，不开启和默认为不推送r18推文|\n|   取关推主   |无 | 否  | 群聊/私聊 | 取关切割 |\n|   推主列表   |无 | 否  | 群聊/私聊 | 展示列表 |\n| 推文推送关闭 |群管| 否 | 群聊/私聊 | 关闭推送 |\n| 推文推送开启 |群管| 否 | 群聊/私聊 | 开启推送 |\n    ",
       "type": "application",
       "homepage": "https://github.com/nek0us/nonebot-plugin-twitter",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13847,9 +13669,7 @@
       "tags": "[{\"label\": \"twitter\", \"color\": \"#29a8dc\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_twitter",
@@ -13883,9 +13703,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-pcrjjc": {
@@ -13898,9 +13716,7 @@
       "usage": "发送 竞技场帮助 获取详细使用说明",
       "type": "application",
       "homepage": "https://github.com/reine-ishyanami/nonebot-plugin-pcrjjc",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13913,9 +13729,7 @@
       "tags": "[{\"label\": \"t:\\u516c\\u4e3b\\u8fde\\u7ed3\", \"color\": \"#778a1e\"}, {\"label\": \"t:pcrjjc\", \"color\": \"#778a1e\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_pcrjjc",
@@ -13957,9 +13771,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-audiocraft": {
@@ -13972,9 +13784,7 @@
       "usage": "\n    每次重启机器人后，使用 %%后端服务器地址 绑定audiocraft后端服务器。\n    绑定后端服务器后，使用 AI作曲+乐曲的英文描述 即可触发AI作曲。\n    ",
       "type": "application",
       "homepage": "https://github.com/Alpaca4610/nonebot-plugin-audiocraft",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -13987,9 +13797,7 @@
       "tags": "[{\"label\": \"AI\", \"color\": \"#ea5252\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_audiocraft",
@@ -14023,9 +13831,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   },
   "nonebot-plugin-bili-push": {
@@ -14050,9 +13856,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "current": null
   },
@@ -14066,9 +13870,7 @@
       "usage": "/战雷查水表 [玩家id]",
       "type": "application",
       "homepage": "https://github.com/0Neptune0/nonebot-plugin-warthunder-player-check",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "validation_message": null,
     "validation_raw_data": {
@@ -14081,9 +13883,7 @@
       "tags": "[{\"label\": \"Wathunder\", \"color\": \"#ea5252\"}]",
       "plugin_test_result": true,
       "type": "application",
-      "supported_adapters": [
-        "~onebot.v11"
-      ]
+      "supported_adapters": ["~onebot.v11"]
     },
     "previous": {
       "module_name": "nonebot_plugin_warthunder_player_check",
@@ -14100,9 +13900,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     },
     "current": {
       "module_name": "nonebot_plugin_warthunder_player_check",
@@ -14119,9 +13917,7 @@
       ],
       "is_official": false,
       "type": "application",
-      "supported_adapters": [
-        "nonebot.adapters.onebot.v11"
-      ]
+      "supported_adapters": ["nonebot.adapters.onebot.v11"]
     }
   }
 }
