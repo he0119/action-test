@@ -33,28 +33,40 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: nonebot/noneflow
+          fetch-depth: 0
+
       - name: Install poetry
         run: pipx install poetry
+
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
+
       - name: Prepare test
         run: |
           poetry install
           mkdir -p plugin_test/store
-          curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/results.json -o plugin_test/store/results.json
-          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/plugins.json -o plugin_test/store/plugins.json
-          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/bots.json -o plugin_test/bots.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/results.json -o plugin_test/store/previous_results.json
+          curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/plugins.json -o plugin_test/store/previous_plugins.json
           curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/adapters.json -o plugin_test/adapters.json
+          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/bots.json -o plugin_test/bots.json
+          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/plugins.json -o plugin_test/store/plugins.json
+
       - name: Test plugin
         if: ${{ !contains(fromJSON('["Bot", "Adapter", "Plugin"]'), github.event.client_payload.type) }}
         run: |
           poetry run python -m src.utils.store_test --offset ${{ github.event.inputs.offset || 0 }} --limit ${{ github.event.inputs.limit || 50 }} ${{ github.event.inputs.args }}
+
       - name: Update registry(Plugin)
         if: github.event.client_payload.type == 'Plugin'
         run: poetry run python -m src.utils.store_test -k '${{ github.event.client_payload.key }}' -f
         env:
           PLUGIN_CONFIG: ${{ github.event.client_payload.config }}
+
+      - name: Update registry(Bot, Apdater)
+        if: ${{ contains(fromJSON('["Bot", "Adapter"]'), github.event.client_payload.type) }}
+        run: poetry run python -m src.utils.store_test -l 0
+
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
