@@ -48,8 +48,8 @@ jobs:
           mkdir -p plugin_test/store
           curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/results.json -o plugin_test/store/previous_results.json
           curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/plugins.json -o plugin_test/store/previous_plugins.json
-          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/adapters.json -o plugin_test/adapters.json
-          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/bots.json -o plugin_test/bots.json
+          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/adapters.json -o plugin_test/store/adapters.json
+          curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/bots.json -o plugin_test/store/bots.json
           curl -sSL https://raw.githubusercontent.com/he0119/action-test/main/nonebot/plugins.json -o plugin_test/store/plugins.json
 
       - name: Test plugin
