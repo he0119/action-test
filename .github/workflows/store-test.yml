@@ -15,8 +15,6 @@ on:
         description: "Args"
         required: false
         default: ""
-  schedule:
-    - cron: "0 */4 * * *"
   repository_dispatch:
     types: [registry_update]
 
