@@ -1578,5 +1578,17 @@
     "is_official": false,
     "type": "application",
     "supported_adapters": ["nonebot.adapters.onebot.v11"]
+  },
+  {
+    "module_name": "nonebot_plugin_sudo",
+    "project_link": "nonebot-plugin-sudo",
+    "name": "SUDO",
+    "desc": "以指定用户身份执行命令",
+    "author": "he0119",
+    "homepage": "https://github.com/This-is-XiaoDeng/nonebot-plugin-sudo",
+    "tags": [],
+    "is_official": false,
+    "type": "application",
+    "supported_adapters": ["nonebot.adapters.onebot.v11"]
   }
 ]
