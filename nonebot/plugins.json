@@ -1595,5 +1595,17 @@
     "is_official": false,
     "type": "application",
     "supported_adapters": ["nonebot.adapters.onebot.v11"]
+  },
+  {
+    "module_name": "nonebot_plugin_simple_httpcat",
+    "project_link": "nonebot-plugin-simple-httpcat",
+    "name": "httpcat-状态猫😺",
+    "desc": "简单粗暴的httpcat插件，参考了zjkwdy大佬的weather_lite插件",
+    "author": "he0119",
+    "homepage": "https://github.com/XTxiaoting14332/nonebot-plugin-simple-httpcat",
+    "tags": [],
+    "is_official": false,
+    "type": "application",
+    "supported_adapters": ["nonebot.adapters.onebot.v11"]
   }
 ]
