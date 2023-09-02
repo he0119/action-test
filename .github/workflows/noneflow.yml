@@ -58,7 +58,7 @@ jobs:
     needs: plugin_test
     steps:
       - name: Print needs
-        run: echo ${{ toJson(needs) }}
+        run: echo "${{ toJson(needs) }}"
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Cache pre-commit hooks
