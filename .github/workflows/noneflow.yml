@@ -16,8 +16,11 @@ concurrency:
 
 jobs:
   plugin_test:
-    runs-on: ubuntu-latest
     name: nonebot2 plugin test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
     if: ${{ !(github.event_name == 'issue_comment' && github.event.issue.pull_request) }}
     outputs:
       result: ${{ steps.plugin-test.outputs.RESULT }}
@@ -54,6 +57,8 @@ jobs:
       }}
     needs: plugin_test
     steps:
+      - name: Print needs
+        run: echo ${{ toJson(needs) }}
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Cache pre-commit hooks
