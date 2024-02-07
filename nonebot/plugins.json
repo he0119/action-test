@@ -1607,5 +1607,17 @@
     "is_official": false,
     "type": "application",
     "supported_adapters": ["nonebot.adapters.onebot.v11"]
+  },
+  {
+    "module_name": "nonebot_plugin_make_choice",
+    "project_link": "nonebot-plugin-make-choice",
+    "author": "he0119",
+    "tags": [
+      {
+        "label": "choice",
+        "color": "#77c5ff"
+      }
+    ],
+    "is_official": false
   }
 ]
