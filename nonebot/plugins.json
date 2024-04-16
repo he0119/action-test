@@ -1607,5 +1607,17 @@
     "is_official": false,
     "type": "application",
     "supported_adapters": ["nonebot.adapters.onebot.v11"]
+  },
+  {
+    "module_name": "nonebot_plugin_nai3",
+    "project_link": "nonebot-plugin-nai3",
+    "author": "he0119",
+    "tags": [
+      {
+        "label": "NovelAI",
+        "color": "#35f139"
+      }
+    ],
+    "is_official": false
   }
 ]
