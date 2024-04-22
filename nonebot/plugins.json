@@ -1607,5 +1607,12 @@
     "is_official": false,
     "type": "application",
     "supported_adapters": ["nonebot.adapters.onebot.v11"]
+  },
+  {
+    "module_name": "nonebot_plugin_sanyao",
+    "project_link": "nonebot-plugin-sanyao",
+    "author": "he0119",
+    "tags": [],
+    "is_official": false
   }
 ]
