@@ -42,6 +42,8 @@ jobs:
 
       - name: Prepare test
         run: |
+          poetry config virtualenvs.in-project true
+          poetry config virtualenvs.prefer-active-python true
           poetry install
           mkdir -p plugin_test/store
           curl -sSL https://raw.githubusercontent.com/nonebot/registry/results/results.json -o plugin_test/store/previous_results.json
