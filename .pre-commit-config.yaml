@@ -10,4 +10,4 @@ repos:
     hooks:
       - id: prettier
         types_or: [json]
-        stages: [commit]
+        stages: [pre-commit]
